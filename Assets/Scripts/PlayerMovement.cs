@@ -5,6 +5,7 @@ using UnityEngine;
 public class PlayerMovement : MonoBehaviour
 {
     private Rigidbody2D rb;
+    private Animator ani;
     
     private float movement;
     public int movementSpeed;
@@ -16,12 +17,21 @@ public class PlayerMovement : MonoBehaviour
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        ani = GetComponent<Animator>();
     }
 
     
     void Update()
     {
         movement = Input.GetAxis("Horizontal");
+        if (Mathf.Abs(movement) > 0.1f)
+        {
+            ani.SetFloat("Running", 1f);
+        }
+        else if (movement < 0.1f)
+        {
+            ani.SetFloat("Running", 0f);
+        }
 
         FlipPlayer();
 
@@ -30,7 +40,13 @@ public class PlayerMovement : MonoBehaviour
             {
                 Jump();
                 isGrounded = false;
+                ani.SetBool("Jumping", true);
             }
+        }
+
+        if (Input.GetMouseButtonDown(0))
+        {
+            AttackOne();
         }
     }
 
@@ -58,11 +74,17 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
+    void AttackOne()
+    {
+        ani.SetTrigger("Attacking");
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
         {
             isGrounded = true;
+            ani.SetBool("Jumping", false);
         }
     }
 }
