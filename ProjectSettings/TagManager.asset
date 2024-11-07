@@ -12,7 +12,7 @@ TagManager:
   - 
   - Water
   - UI
-  - 
+  - Ground
   - 
   - 
   - 
@@ -44,6 +44,9 @@ TagManager:
     locked: 0
   - name: BG2
     uniqueID: 1251402799
+    locked: 0
+  - name: BG1
+    uniqueID: 236027685
     locked: 0
   - name: Default
     uniqueID: 0
