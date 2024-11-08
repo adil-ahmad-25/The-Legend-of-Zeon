@@ -10,14 +10,46 @@ public class EnemyPatrol : MonoBehaviour
     public float distance = 1f;
     public LayerMask layerMask;
     private bool playerInRange = false;
+    public Transform playerPosition;
+    public float attackRange;
+    public float retrieveDistance;
+    private Animator ani;
     
     void Start()
     {
-        
+        ani = GetComponent<Animator>();
     }
 
     // Update is called once per frame
     void Update()
+    {
+        if (Vector2.Distance(transform.position, playerPosition.position) <= attackRange)
+        {
+            playerInRange = true;
+        }
+        else
+        {
+            playerInRange = false;
+        }
+
+        if (playerInRange)
+        {
+            if (Vector2.Distance(transform.position, playerPosition.position) > retrieveDistance)
+            {
+                transform.position = Vector2.MoveTowards(transform.position, playerPosition.position, moveSpeed * Time.deltaTime);  
+            }
+            else
+            {
+                ani.SetBool("Attack", true);
+            }
+        }
+        else
+        {
+            Patrol();
+        }
+    }
+
+    void Patrol()
     {
         transform.Translate(Vector2.left * Time.deltaTime * moveSpeed);
 
@@ -32,7 +64,7 @@ public class EnemyPatrol : MonoBehaviour
         {
             transform.eulerAngles = new Vector3(0, 0, 0);
             facingLeft = true;
-        }    
+        }
     }
 
     private void OnDrawGizmosSelected()
@@ -43,5 +75,8 @@ public class EnemyPatrol : MonoBehaviour
         }
         Gizmos.color = Color.magenta;
         Gizmos.DrawRay(checkPoint.position, Vector2.down * distance);
+
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(transform.position, attackRange);
     }
 }
