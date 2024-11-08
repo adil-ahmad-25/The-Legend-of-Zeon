@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,11 +9,19 @@ public class PlayerMovement : MonoBehaviour
     private Animator ani;
     
     private float movement;
+    
     public int movementSpeed;
     public int jumpForce;
+    public int maxHealth;
 
     private bool isFacingRight = true;
     private bool isGrounded = true;
+
+    public Text healthValue;
+
+    public Transform attackPoint;
+    public float attackRadius;
+    public LayerMask attackLayer;
 
     void Start()
     {
@@ -23,6 +32,13 @@ public class PlayerMovement : MonoBehaviour
     
     void Update()
     {
+        UpdateHealth();
+        
+        if (maxHealth <= 0)
+        {
+            Die();
+        }
+        
         movement = Input.GetAxis("Horizontal");
         if (Mathf.Abs(movement) > 0.1f)
         {
@@ -46,7 +62,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
-            AttackOne();
+            ani.SetTrigger("Attacking");
         }
     }
 
@@ -74,11 +90,6 @@ public class PlayerMovement : MonoBehaviour
         rb.AddForce(new Vector2(0f, jumpForce), ForceMode2D.Impulse);
     }
 
-    void AttackOne()
-    {
-        ani.SetTrigger("Attacking");
-    }
-
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if (collision.gameObject.tag == "Ground")
@@ -86,5 +97,47 @@ public class PlayerMovement : MonoBehaviour
             isGrounded = true;
             ani.SetBool("Jumping", false);
         }
+    }
+
+    public void Attack()
+    {
+        Collider2D collisionInfo = Physics2D.OverlapCircle(attackPoint.position, attackRadius, attackLayer);
+
+        if (collisionInfo)
+        {
+            if (collisionInfo.gameObject.GetComponent<EnemyPatrol>() != null)
+            {
+                collisionInfo.gameObject.GetComponent<EnemyPatrol>().TakeDamage(1); 
+            }
+        }
+    }
+
+    public void TakeDamage(int damage)
+    {
+        if (maxHealth <= 0)
+        {
+            return;
+        }
+        
+        maxHealth -= damage;
+    }
+
+    public void UpdateHealth()
+    {
+        healthValue.text = maxHealth.ToString();
+    }
+    
+    public void Die()
+    {
+        FindObjectOfType<GameManager>().isGameActive = false;
+        Debug.Log("Player Died");
+        //Animation
+    }
+
+    void OnDrawGizmosSelected()
+    {
+        if (attackPoint == null) return;
+        Gizmos.color = Color.red;
+        Gizmos.DrawWireSphere(attackPoint.position, attackRadius);
     }
 }
