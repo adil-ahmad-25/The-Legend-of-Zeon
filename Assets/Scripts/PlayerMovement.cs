@@ -16,6 +16,7 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isFacingRight = true;
     private bool isGrounded = true;
+    private bool canAttack = true;
 
     public Text healthValue;
 
@@ -60,15 +61,23 @@ public class PlayerMovement : MonoBehaviour
             }
         }
 
-        if (Input.GetMouseButtonDown(0))
+        if (Input.GetMouseButtonDown(0) && canAttack)
         {
-            ani.SetTrigger("Attacking");
+            StartCoroutine(TriggerAttack());    
         }
     }
 
     private void FixedUpdate()
     {
         transform.position += new Vector3(movement, 0f, 0f) * Time.fixedDeltaTime * movementSpeed;
+    }
+
+    private IEnumerator TriggerAttack()
+    {
+        canAttack = false; 
+        ani.SetTrigger("Attacking"); 
+        yield return new WaitForSeconds(0.2f); 
+        canAttack = true;
     }
 
     void FlipPlayer()
@@ -129,7 +138,6 @@ public class PlayerMovement : MonoBehaviour
     
     public void Die()
     {
-        FindObjectOfType<GameManager>().isGameActive = false;
         Debug.Log("Player Died");
         //Animation
     }
