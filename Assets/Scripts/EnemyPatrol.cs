@@ -143,7 +143,7 @@ public class EnemyPatrol : MonoBehaviour
     public void TakeDamage(int damage)
     {
         if (maxHealth <= 0) return;
-
+        ani.SetTrigger("Hurt");
         maxHealth -= damage;
     }
 
@@ -152,8 +152,8 @@ public class EnemyPatrol : MonoBehaviour
         Destroy(this.gameObject);
     }
 
-    // Updated Gizmos to draw patrol path between patrol points
-    private void OnDrawGizmosSelected()
+        // Updated Gizmos to draw patrol path between patrol points
+        private void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.red;
         Gizmos.DrawWireSphere(transform.position, attackRange);

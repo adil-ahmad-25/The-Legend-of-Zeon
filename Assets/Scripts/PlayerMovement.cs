@@ -23,11 +23,13 @@ public class PlayerMovement : MonoBehaviour
     public Transform attackPoint;
     public float attackRadius;
     public LayerMask attackLayer;
+    private CameraShake cameraShake;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         ani = GetComponent<Animator>();
+        cameraShake = FindAnyObjectByType<CameraShake>();
     }
 
     
@@ -75,8 +77,12 @@ public class PlayerMovement : MonoBehaviour
     private IEnumerator TriggerAttack()
     {
         canAttack = false; 
-        ani.SetTrigger("Attacking"); 
-        yield return new WaitForSeconds(0.2f); 
+        ani.SetTrigger("Attacking");
+        if (cameraShake != null)
+        {
+            cameraShake.ShakeCamera();
+        }
+        yield return new WaitForSeconds(0.4f); 
         canAttack = true;
     }
 
