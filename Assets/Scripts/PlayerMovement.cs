@@ -25,7 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask attackLayer;
     private CameraShake cameraShake;
 
-    public KeyManager keyManager;
+    public KeyManager keyM;
+    public UiManager uimanager;
 
     void Start()
     {
@@ -121,7 +122,7 @@ public class PlayerMovement : MonoBehaviour
         if (trig.gameObject.CompareTag("Key"))
         {
             Destroy(trig.gameObject);
-            keyManager.keyCount++;
+            keyM.keyCount++;
         }
     }
 
@@ -140,12 +141,19 @@ public class PlayerMovement : MonoBehaviour
 
     public void TakeDamage(int damage)
     {
+        ani.SetBool("Hurt", true);
         if (maxHealth <= 0)
         {
             return;
         }
-        
         maxHealth -= damage;
+        StartCoroutine(ResetHurtAnimation());
+    }
+
+    private IEnumerator ResetHurtAnimation()
+    { // Wait for the duration of the "Hurt" animation
+        yield return new WaitForSeconds(0.3f); // Adjust the duration to match your "Hurt" animation length
+        ani.SetBool("Hurt", false); // Reset the "Hurt" animation
     }
 
     public void UpdateHealth()
@@ -156,6 +164,7 @@ public class PlayerMovement : MonoBehaviour
     public void Die()
     {
         Debug.Log("Player Died");
+        uimanager.GameOver();
         //Animation
     }
 

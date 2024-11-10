@@ -19,12 +19,12 @@ public class KeyManager : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        /*keyText.text = keyCount.ToString();
+        keyText.text = keyCount.ToString();
 
-        if (keyCount == 5 && !doorDestroyed)
+        if (keyCount == 2 && !doorDestroyed)
         {
             Destroy(door);
             doorDestroyed = true;
-        }*/
+        }
     }
 }

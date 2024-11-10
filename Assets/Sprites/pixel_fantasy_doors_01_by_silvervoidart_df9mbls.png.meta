@@ -1,0 +1,378 @@
+fileFormatVersion: 2
+guid: 8f2c2b7b21ca0294db1804ad05abed04
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_0
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 723
+        width: 240
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2fc5bca305daac942a0cfbb2b22be434
+      internalID: 1399769115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_1
+      rect:
+        serializedVersion: 2
+        x: 303
+        y: 723
+        width: 222
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62a30e09404e6174aa354e3867955a6c
+      internalID: 510911966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_2
+      rect:
+        serializedVersion: 2
+        x: 549
+        y: 723
+        width: 195
+        height: 330
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1deb8cffa028a674f9b5a0dd972b211a
+      internalID: 866153181
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_3
+      rect:
+        serializedVersion: 2
+        x: 759
+        y: 723
+        width: 276
+        height: 354
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f1cb93a3fd106843bfd0dfa9586af0e
+      internalID: -981404426
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_4
+      rect:
+        serializedVersion: 2
+        x: 33
+        y: 372
+        width: 228
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 715a7ba97a830724c9e721986c9f2521
+      internalID: 1993873862
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_5
+      rect:
+        serializedVersion: 2
+        x: 273
+        y: 372
+        width: 336
+        height: 342
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: deba11f9f02a0eb46829d53f12eee03f
+      internalID: 60574345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_6
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 372
+        width: 222
+        height: 345
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8933e288e694b344fb6e3ccfdd330566
+      internalID: -1428565584
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_7
+      rect:
+        serializedVersion: 2
+        x: 888
+        y: 372
+        width: 189
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f4edd61c4300d634bae09d10af83d821
+      internalID: -36643558
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_8
+      rect:
+        serializedVersion: 2
+        x: 42
+        y: 24
+        width: 183
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ccb5fd1d4c62394b92f222c76e28599
+      internalID: 2009696642
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_9
+      rect:
+        serializedVersion: 2
+        x: 261
+        y: 24
+        width: 192
+        height: 333
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 62efeebb6fef23b4f9f97a74a455392f
+      internalID: -91278415
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_10
+      rect:
+        serializedVersion: 2
+        x: 492
+        y: 24
+        width: 219
+        height: 336
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8006c533423295b4e8a6887fbe3d9fe3
+      internalID: 1420540609
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: pixel_fantasy_doors_01_by_silvervoidart_df9mbls_11
+      rect:
+        serializedVersion: 2
+        x: 756
+        y: 24
+        width: 297
+        height: 321
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e0d389bf1e3cdba43a9cb1d23fc189ba
+      internalID: -431234725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_0: 1399769115
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_1: 510911966
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_10: 1420540609
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_11: -431234725
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_2: 866153181
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_3: -981404426
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_4: 1993873862
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_5: 60574345
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_6: -1428565584
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_7: -36643558
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_8: 2009696642
+      pixel_fantasy_doors_01_by_silvervoidart_df9mbls_9: -91278415
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
