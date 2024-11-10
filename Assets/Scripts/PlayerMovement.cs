@@ -25,6 +25,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask attackLayer;
     private CameraShake cameraShake;
 
+    public KeyManager keyManager;
+
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -111,6 +113,15 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = true;
             ani.SetBool("Jumping", false);
+        }
+    }
+
+    private void OnTriggerEnter2D(Collider2D trig)
+    {
+        if (trig.gameObject.CompareTag("Key"))
+        {
+            Destroy(trig.gameObject);
+            keyManager.keyCount++;
         }
     }
 
